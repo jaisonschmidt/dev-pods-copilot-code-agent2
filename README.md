@@ -3,6 +3,24 @@
 
 # 🎉 Congratulations jaisonschmidt! 🎉
 
+## 📋 Para Professores: Sistema de Solicitações
+
+**Precisa solicitar uma mudança ou reportar um problema no sistema?**
+
+👉 **[Clique aqui para criar uma solicitação](../../issues/new/choose)**
+
+📖 **[Leia o guia completo para professores](docs/guia-professores.md)**
+
+O sistema agora possui formulários específicos para facilitar suas solicitações:
+- 🐛 Reportar problemas
+- ➕ Solicitar novas atividades  
+- ✨ Sugerir melhorias
+- 📝 Atualizar dados
+- 🎯 Melhorar usabilidade
+- ❓ Ajuda geral
+
+---
+
 <img src="https://octodex.github.com/images/welcometocat.png" height="200px" />
 
 ### 🌟 You've successfully completed the exercise! 🌟

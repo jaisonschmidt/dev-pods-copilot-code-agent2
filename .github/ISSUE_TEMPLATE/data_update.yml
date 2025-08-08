@@ -1,0 +1,139 @@
+name: 📝 Atualizar Dados de Atividade
+description: Use este formulário para solicitar alterações em atividades existentes
+title: "[ATUALIZAÇÃO] "
+labels: ["data-update", "maintenance"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este formulário quando precisar alterar informações de uma atividade que já existe no sistema.
+        
+        **Exemplos**: Mudar horário, alterar professor responsável, atualizar descrição, modificar número de vagas, etc.
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Nome da Atividade a ser Alterada
+      description: Qual atividade precisa ser atualizada?
+      placeholder: Ex. "Clube de Robótica", "Time de Basquete", "Coral Escolar"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: Tipo de Alteração
+      description: O que precisa ser alterado nesta atividade?
+      options:
+        - Informações básicas (nome, descrição)
+        - Horário e frequência
+        - Professor coordenador
+        - Local das atividades
+        - Número de vagas
+        - Séries participantes
+        - Pré-requisitos
+        - Status da atividade (ativar/desativar)
+        - Múltiplas alterações
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-info
+    attributes:
+      label: Informação Atual (como está agora)
+      description: Como está a informação que precisa ser alterada?
+      placeholder: |
+        Ex. "Horário atual: Terças das 14h às 15h30"
+        Ex. "Professor atual: Prof. Maria Santos"
+        Ex. "Número de vagas atual: 15 alunos"
+    validations:
+      required: true
+
+  - type: textarea
+    id: new-info
+    attributes:
+      label: Nova Informação (como deveria ficar)
+      description: Como deveria ficar a informação após a alteração?
+      placeholder: |
+        Ex. "Novo horário: Quartas das 15h às 16h30"
+        Ex. "Novo professor: Prof. João Silva (joao.silva@mergington.edu)"
+        Ex. "Novo número de vagas: 20 alunos"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Motivo da Alteração
+      description: Por que esta alteração é necessária?
+      placeholder: |
+        Ex. "A Prof. Maria Santos será transferida para outra escola"
+        Ex. "O laboratório onde a atividade acontece será reformado"
+        Ex. "Houve aumento na demanda dos alunos"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgência da Alteração
+      options:
+        - Imediata - Precisa ser alterado hoje
+        - Esta semana - Precisa ser alterado até o fim da semana
+        - Próxima semana - Pode ser alterado na próxima semana
+        - Próximo mês - Não há pressa
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-students
+    attributes:
+      label: Impacto nos Alunos
+      description: Como esta alteração afetará os alunos já inscritos? Eles precisam ser notificados?
+      placeholder: |
+        Ex. "Os 12 alunos inscritos precisam ser notificados sobre a mudança de horário"
+        Ex. "Não afeta os alunos diretamente"
+        Ex. "Os alunos precisam confirmar se ainda querem participar com o novo horário"
+
+  - type: dropdown
+    id: notification-needed
+    attributes:
+      label: Notificação Necessária
+      description: Quem precisa ser informado sobre esta alteração?
+      options:
+        - Ninguém - alteração interna apenas
+        - Alunos inscritos na atividade
+        - Pais dos alunos inscritos
+        - Outros professores
+        - Direção/coordenação
+        - Toda a comunidade escolar
+    validations:
+      required: true
+
+  - type: input
+    id: effective-date
+    attributes:
+      label: Data de Vigência
+      description: A partir de quando esta alteração deve entrar em vigor?
+      placeholder: Ex. "Imediatamente", "A partir de 15/04/2024", "Início do próximo bimestre"
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Observações Adicionais
+      description: Qualquer informação adicional importante sobre esta alteração
+      placeholder: |
+        Ex. "Esta mudança já foi aprovada pela coordenação pedagógica"
+        Ex. "O novo professor já foi orientado sobre a atividade"
+        Ex. "Precisa verificar disponibilidade do novo horário com a secretaria"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Verificação
+      options:
+        - label: A alteração foi aprovada pela coordenação/direção (se necessário)
+        - label: O novo professor está ciente e disponível (se aplicável)
+        - label: Verifiquei que a nova informação está correta
+        - label: Considerei o impacto nos alunos já inscritos

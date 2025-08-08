@@ -1,0 +1,135 @@
+name: 🎯 Melhorar Experiência de Uso
+description: Use este formulário quando algo no sistema é confuso, difícil de usar ou poderia ser mais intuitivo
+title: "[UX] "
+labels: ["user-experience", "enhancement"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este formulário quando encontrar algo no sistema que é confuso, difícil de usar, ou que poderia ser mais fácil de entender.
+        
+        **Para professores**: Mesmo que pareça um "problema pequeno", sua opinião é importante para tornar o sistema melhor para todos!
+
+  - type: input
+    id: issue-summary
+    attributes:
+      label: O que é confuso ou difícil de usar?
+      description: Resuma em uma frase o que está causando dificuldade
+      placeholder: Ex. "Não sei onde encontrar a lista de alunos inscritos", "Os botões são muito pequenos"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed-description
+    attributes:
+      label: Descrição detalhada
+      description: Explique com mais detalhes qual é a dificuldade que você encontra
+      placeholder: |
+        Ex. "Quando entro no sistema, demoro muito para encontrar onde posso ver quantos alunos estão inscritos em cada atividade. Às vezes clico em vários lugares até achar."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Quando isso acontece?
+      description: Em qual situação você enfrenta essa dificuldade?
+      placeholder: |
+        Ex. "Toda vez que preciso conferir as inscrições no final do dia"
+        Ex. "Principalmente quando estou com pressa entre uma aula e outra"
+        Ex. "Quando outros professores me perguntam sobre as atividades"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Como deveria funcionar idealmente?
+      description: Como você gostaria que fosse para ser mais fácil de usar?
+      placeholder: |
+        Ex. "Gostaria que na página inicial já mostrasse um resumo com o número de inscritos em cada atividade"
+        Ex. "Os botões poderiam ser maiores e com cores mais visíveis"
+        Ex. "Deveria ter uma busca para encontrar rapidamente uma atividade específica"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Com que frequência você enfrenta essa dificuldade?
+      options:
+        - Toda vez que uso o sistema
+        - Várias vezes por semana
+        - Algumas vezes por semana
+        - Algumas vezes por mês
+        - Raramente, mas é frustrante quando acontece
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: Quanto isso atrapalha seu trabalho?
+      options:
+        - Muito - Me faz perder bastante tempo
+        - Moderadamente - É inconveniente
+        - Pouco - É só uma pequena frustração
+        - Não atrapalha muito, mas poderia ser melhor
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-users
+    attributes:
+      label: Outros professores têm a mesma dificuldade?
+      description: Você já conversou com outros colegas sobre isso? Eles têm o mesmo problema?
+      placeholder: |
+        Ex. "Sim, a Prof. Ana também já comentou que tem dificuldade para encontrar essas informações"
+        Ex. "Não conversei com outros colegas sobre isso"
+        Ex. "Alguns colegas também acham confuso, outros parecem se virar bem"
+
+  - type: dropdown
+    id: tech-comfort
+    attributes:
+      label: Como você se considera com tecnologia?
+      description: Esta informação nos ajuda a entender melhor sua perspectiva
+      options:
+        - Muito confortável - uso tecnologia facilmente
+        - Razoavelmente confortável - consigo me virar
+        - Pouco confortável - prefiro coisas simples
+        - Não me sinto confortável - tecnologia é difícil para mim
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suas sugestões
+      description: Tem alguma ideia específica de como melhorar? Viu algo similar em outros sistemas que funcionava bem?
+      placeholder: |
+        Ex. "No sistema de email da escola, as informações importantes ficam sempre no topo da tela"
+        Ex. "Poderia ter ícones além das palavras para ficar mais visual"
+        Ex. "Uma ajuda ou tutorial rápido seria útil"
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Como você resolve isso atualmente?
+      description: O que você faz hoje para contornar essa dificuldade?
+      placeholder: |
+        Ex. "Anoto em um papel os números que preciso lembrar"
+        Ex. "Peço ajuda para outros professores que conhecem melhor o sistema"
+        Ex. "Evito usar essa parte do sistema quando possível"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Quão importante seria resolver isso?
+      options:
+        - Muito importante - melhoraria significativamente meu dia a dia
+        - Importante - seria uma boa melhoria
+        - Moderadamente importante - seria útil ter
+        - Pouco importante - seria apenas uma conveniência extra
+    validations:
+      required: true
