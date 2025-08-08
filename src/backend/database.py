@@ -163,6 +163,17 @@ initial_activities = {
         },
         "max_participants": 16,
         "participants": ["william@mergington.edu", "jacob@mergington.edu"]
+    },
+    "Manga Maniacs": {
+        "description": "Mergulhe no incrível universo dos Mangás japoneses! Descubra heróis épicos, aventuras extraordinárias e mundos fantásticos que vão além da imaginação. Junte-se a nós para explorar as melhores histórias do Japão, discutir seus personagens favoritos e descobrir novos mangás que vão te deixar viciado!",
+        "schedule": "Tuesdays, 7:00 PM - 8:00 PM",
+        "schedule_details": {
+            "days": ["Tuesday"],
+            "start_time": "19:00",
+            "end_time": "20:00"
+        },
+        "max_participants": 15,
+        "participants": []
     }
 }
 
