@@ -1,0 +1,155 @@
+name: ➕ Solicitar Nova Atividade
+description: Use este formulário para solicitar a adição de uma nova atividade extracurricular ao sistema
+title: "[NOVA ATIVIDADE] "
+labels: ["enhancement", "new-activity"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este formulário para solicitar a criação de uma nova atividade extracurricular no sistema.
+        
+        **Dica**: Forneça o máximo de detalhes possível para que a atividade seja configurada corretamente.
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Nome da Atividade
+      description: Qual é o nome da nova atividade?
+      placeholder: Ex. "Clube de Robótica", "Coral Escolar", "Time de Vôlei Feminino"
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Descrição da Atividade
+      description: Descreva a atividade e seus objetivos
+      placeholder: |
+        Ex. "O Clube de Robótica visa ensinar programação básica e montagem de robôs para alunos do ensino médio. Os estudantes aprenderão conceitos de engenharia, programação e trabalho em equipe através de projetos práticos."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria da Atividade
+      description: Em qual categoria esta atividade se encaixa?
+      options:
+        - Esportes
+        - Arte e Cultura
+        - Ciência e Tecnologia
+        - Voluntariado e Comunidade
+        - Idiomas
+        - Música
+        - Teatro e Drama
+        - Debate e Oratória
+        - Outra (especificar na descrição)
+    validations:
+      required: true
+
+  - type: input
+    id: coordinator
+    attributes:
+      label: Professor Coordenador
+      description: Quem será o professor responsável por esta atividade?
+      placeholder: Ex. "Prof. João Silva"
+    validations:
+      required: true
+
+  - type: input
+    id: coordinator-email
+    attributes:
+      label: Email do Coordenador
+      description: Email do professor coordenador
+      placeholder: Ex. "joao.silva@mergington.edu"
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Número Máximo de Participantes
+      description: Quantos alunos podem participar desta atividade?
+      placeholder: Ex. "20", "15", "sem limite"
+    validations:
+      required: true
+
+  - type: textarea
+    id: schedule
+    attributes:
+      label: Horário e Frequência
+      description: Quando a atividade acontecerá?
+      placeholder: |
+        Ex. "Terças e quintas das 15h às 16h30"
+        Ex. "Sábados das 9h às 11h"
+        Ex. "Uma vez por semana, horário a definir"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Local das Atividades
+      description: Onde a atividade acontecerá?
+      placeholder: Ex. "Laboratório de Informática", "Quadra Esportiva", "Sala de Música"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-grades
+    attributes:
+      label: Séries Participantes
+      description: Para quais séries esta atividade é destinada?
+      options:
+        - Todas as séries
+        - 1º ano apenas
+        - 2º ano apenas  
+        - 3º ano apenas
+        - 1º e 2º anos
+        - 2º e 3º anos
+        - Ensino fundamental
+        - Ensino médio
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Pré-requisitos ou Materiais Necessários
+      description: Os alunos precisam de algum conhecimento prévio ou material específico?
+      placeholder: |
+        Ex. "Não há pré-requisitos"
+        Ex. "É recomendável conhecimento básico de matemática"
+        Ex. "Os alunos devem trazer roupas esportivas"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade de Implementação
+      description: Quão urgente é criar esta atividade?
+      options:
+        - Alta - Precisa estar pronta até o fim deste mês
+        - Média - Gostaria que estivesse pronta até o próximo bimestre
+        - Baixa - Não há pressa, pode ser implementada quando possível
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Informações Adicionais
+      description: Qualquer outra informação importante sobre esta atividade
+      placeholder: |
+        Ex. "Esta atividade foi aprovada pela coordenação pedagógica em reunião do dia 15/03"
+        Ex. "Temos parceria com empresa local que pode fornecer equipamentos"
+        Ex. "Atividade similar já existe em outras escolas da rede"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Verificação
+      options:
+        - label: Esta atividade foi aprovada pela coordenação/diretoria
+        - label: O professor coordenador está ciente e disponível
+        - label: Verifiquei que não existe atividade similar já cadastrada

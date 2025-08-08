@@ -1,0 +1,106 @@
+name: 🐛 Reportar Problema no Sistema
+description: Use este formulário quando algo não estiver funcionando corretamente no sistema de atividades
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar um problema! Este formulário nos ajudará a entender e corrigir o que não está funcionando.
+        
+        **Para professores**: Não se preocupe com detalhes técnicos - apenas descreva o que você estava tentando fazer e o que aconteceu.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo do problema
+      description: Em uma frase, qual é o problema?
+      placeholder: Ex. "Não consigo adicionar alunos à atividade de teatro"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: O que aconteceu?
+      description: Descreva detalhadamente o que você estava fazendo quando o problema ocorreu
+      placeholder: |
+        Ex. "Eu estava tentando adicionar a Maria Santos na atividade de teatro, cliquei no botão 'Inscrever Aluno', mas apareceu uma mensagem de erro e a aluna não foi adicionada à lista."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: O que deveria ter acontecido?
+      description: Como o sistema deveria funcionar nesta situação?
+      placeholder: |
+        Ex. "A aluna deveria aparecer na lista de participantes da atividade de teatro e receber uma confirmação por email."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Como reproduzir o problema?
+      description: Liste os passos para que possamos reproduzir o problema
+      placeholder: |
+        1. Entro no sistema
+        2. Clico em "Atividades"
+        3. Seleciono "Teatro"
+        4. Clico em "Inscrever Aluno"
+        5. Digite o email da aluna
+        6. Clico em "Confirmar"
+        7. Aparece mensagem de erro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Com que frequência isso acontece?
+      options:
+        - Sempre acontece
+        - Acontece às vezes
+        - Aconteceu apenas uma vez
+        - Não sei
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Qual a urgência deste problema?
+      options:
+        - Crítico - Impede o trabalho diário
+        - Alto - Dificulta muito o trabalho
+        - Médio - É inconveniente mas dá para contornar
+        - Baixo - Não é urgente
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Quem mais é afetado por este problema?
+      description: Outros professores, alunos, pais? Quantas pessoas aproximadamente?
+      placeholder: |
+        Ex. "Todos os professores que coordenam atividades extracurriculares (cerca de 15 professores) e os alunos interessados em se inscrever (cerca de 200 alunos)."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Informações adicionais
+      description: Qualquer outra informação que possa ajudar (horário que aconteceu, se estava usando celular ou computador, etc.)
+      placeholder: |
+        Ex. "Isso começou a acontecer ontem à tarde. Estava usando o computador da sala dos professores."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Verificação
+      options:
+        - label: Tentei fazer logout e login novamente
+        - label: Tentei usar um navegador diferente (se aplicável)
+        - label: Verifiquei se outros professores têm o mesmo problema

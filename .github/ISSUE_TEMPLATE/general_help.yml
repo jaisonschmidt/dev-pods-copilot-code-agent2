@@ -1,0 +1,120 @@
+name: ❓ Ajuda Geral
+description: Use este formulário quando precisar de ajuda ou não souber qual template usar
+title: "[AJUDA] "
+labels: ["help", "question"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este formulário quando:
+        - Precisar de ajuda para usar o sistema
+        - Não souber qual template usar para sua solicitação
+        - Tiver uma dúvida geral
+        - Quiser sugerir algo mas não sabe como explicar
+        
+        **Não se preocupe**: Se não souber exatamente como descrever o que precisa, nós te ajudaremos!
+
+  - type: input
+    id: help-summary
+    attributes:
+      label: Em poucas palavras, do que precisa?
+      description: Tente resumir sua necessidade ou dúvida
+      placeholder: Ex. "Não consigo fazer login", "Preciso de ajuda para entender o sistema", "Tenho uma ideia mas não sei se é possível"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: help-type
+    attributes:
+      label: Que tipo de ajuda você precisa?
+      options:
+        - Aprendi a usar uma funcionalidade do sistema
+        - Resolver um problema técnico
+        - Entender como fazer algo específico
+        - Sugerir uma melhoria mas não sei como explicar
+        - Tirar uma dúvida sobre as atividades
+        - Outro tipo de ajuda
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed-description
+    attributes:
+      label: Descreva sua situação
+      description: Conte mais detalhes sobre o que você precisa ou qual é sua dúvida
+      placeholder: |
+        Ex. "Sou novo na escola e não entendo como funciona o sistema de atividades extracurriculares. Gostaria de saber como cadastrar uma nova atividade."
+        
+        Ex. "Estou tentando fazer login mas aparece uma mensagem que não entendo."
+        
+        Ex. "Tenho uma ideia para melhorar o sistema mas não sei se é viável."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Quão urgente é sua necessidade?
+      options:
+        - Muito urgente - preciso resolver hoje
+        - Urgente - preciso resolver esta semana
+        - Normal - seria bom resolver logo
+        - Não é urgente - posso esperar
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempts
+    attributes:
+      label: O que você já tentou?
+      description: Já tentou resolver sozinho? O que fez?
+      placeholder: |
+        Ex. "Tentei clicar em vários lugares mas não consegui"
+        Ex. "Perguntei para outro professor mas ele também não sabia"
+        Ex. "Li o manual mas não encontrei a informação"
+        Ex. "Esta é a primeira vez que tento"
+
+  - type: dropdown
+    id: experience-level
+    attributes:
+      label: Qual sua experiência com o sistema?
+      options:
+        - Sou novo - primeira vez usando
+        - Uso pouco - só o básico
+        - Uso regularmente - conheço a maioria das funções
+        - Uso bastante - conheço bem o sistema
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Informações adicionais
+      description: Qualquer outra informação que possa ajudar a entender sua necessidade
+      placeholder: |
+        Ex. "Sou coordenador do departamento de educação física"
+        Ex. "Trabalho meio período e só uso o sistema às tardes"
+        Ex. "Tenho dificuldade com computadores em geral"
+
+  - type: checkboxes
+    id: contact-preferences
+    attributes:
+      label: Como prefere receber ajuda? (opcional)
+      description: Marque as opções que preferir
+      options:
+        - label: Resposta aqui no GitHub (padrão)
+        - label: Explicação por email seria útil
+        - label: Gostaria de uma conversa pessoalmente
+        - label: Um tutorial passo-a-passo seria ideal
+        - label: Prefiro instruções escritas simples
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Tem alguma sugestão para melhorar o suporte?
+      description: Como podemos ajudar melhor os professores que precisam de suporte?
+      placeholder: |
+        Ex. "Um manual em PDF seria útil"
+        Ex. "Vídeos tutoriais curtos seriam ideais"
+        Ex. "Um grupo no WhatsApp para dúvidas rápidas"

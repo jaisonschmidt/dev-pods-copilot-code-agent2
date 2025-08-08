@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Documentação do Sistema
+    url: ../docs/how-to-develop.md
+    about: Consulte o guia de desenvolvimento para informações técnicas
+  - name: 💬 Suporte Urgente
+    url: mailto:suporte@mergington.edu
+    about: Para problemas urgentes que impedem o trabalho, entre em contato por email
